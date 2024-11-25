@@ -66,20 +66,6 @@ Se utiliza la directiva `@extend` para compartir reglas de estilo entre clases, 
 }
 ```
 
-## Estructura del Proyecto
-
-El proyecto tiene la siguiente estructura:
-
-```
-/assets
-    /scss
-        styles.scss      # Archivo principal donde se importan todos los componentes
-        _variables.scss  # Archivo con las variables globales
-        _mixins.scss     # Archivo con los mixins utilizados
-        _components.scss # Estilos para las diferentes secciones de la página (nav, article, etc.)
-        _footer.scss     # Estilos para el pie de página
-```
-
 ## Instalación
 
 Para usar este proyecto, primero asegúrate de tener **Node.js** y **npm** instalados en tu máquina. Luego, sigue estos pasos:
