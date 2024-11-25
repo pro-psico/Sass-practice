@@ -72,11 +72,11 @@ Para usar este proyecto, primero asegúrate de tener **Node.js** y **npm** insta
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/nombre-del-repositorio.git
+   git clone https://github.com/pro-psico/Sass-practice.git
    ```
 2. Navega al directorio del proyecto:
    ```bash
-   cd nombre-del-repositorio
+   cd Sass-practice
    ```
 3. Instala las dependencias:
    ```bash
