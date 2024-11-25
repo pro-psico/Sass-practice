@@ -1,0 +1,224 @@
+$primary-color: #FFEFE7;
+$secondary-color: #FFDAC6;
+$tertiary-color: #BABD8D;
+$primary-text-color: #7C6A0A;
+$quaternary-color: #FA9500;
+$font-stack: "IBM Plex Sans", sans-serif;
+$paragraph-size: 1.5em;
+
+@mixin flexCenter($direction, $content, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin buttonStyle{
+    button{
+        background: none;
+        border-style: none;
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $primary-color;
+    font-family: $font-stack;
+}
+
+nav{
+    @include flexCenter(row, space-between, center);
+    width: auto;
+    padding: 15px;
+    color: $primary-text-color;
+    p{
+        font-size: $paragraph-size;
+        padding-left: 30px;
+    }
+    .icons{
+        display: flex;
+        gap: 15px;
+        @include buttonStyle;
+    }
+}
+
+article{
+    @include flexCenter(row, space-between, center);
+    width: auto;
+    padding: 70px 45px 0px;
+    color: $primary-text-color;
+    .impact-section{
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    h1{
+        margin: 0;
+        padding: 0;
+        font-size: 3em;
+    }
+    p{
+        font-size: $paragraph-size;
+    }
+    @include buttonStyle;
+    button{
+        width: 12vw;
+        padding: 20px;
+        font-size: 1em;
+        border-radius: 35px;
+        color: white;
+        background-color: $quaternary-color;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    img{
+        width: 25vw;
+        border-radius: 19px;
+    }
+}
+
+section{
+    width: auto;
+    height: auto;
+    padding: 60px;
+    h2{
+        color: $primary-text-color;
+        font-size: 2em;
+    }
+    .healthcare{
+        padding-bottom: 60px;
+        h2{
+            padding-bottom: 60px;
+            font-weight: 300;
+        }
+        .card-section{
+            @include flexCenter(row, center, center);
+            width: auto;
+            height: auto;
+            flex-wrap: wrap;
+            column-gap: 100px;
+            row-gap: 80px;
+        }
+        .product-card{
+            width: 15vw;
+            height: 60vh;
+            padding: 20px;
+            border-radius: 8px;
+            color: $primary-text-color;
+            background-color: $secondary-color;
+            &:hover{
+                transform: scale(1.1);
+            }
+            .icon{
+                width: 100%;
+                height: auto;
+                padding-bottom: 12px;
+                display: flex;
+                justify-content: flex-end;
+                svg{
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+            .product-image{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 15vw;
+                    height: 40vh;
+                    border-radius: 6px;
+                    object-fit: cover;
+            }
+            }
+        }
+    }
+    .furniture{
+        @extend .healthcare;
+        .product-card{
+            color: white;
+            background-color: $tertiary-color;
+        }
+    }
+}
+
+.about-us{
+    padding-bottom: 60px;
+    h2{
+        font-weight: bold;
+        padding-bottom: 60px;
+    }
+    .mission-section{
+        @include flexCenter(row, space-evenly, center);
+        .earth{
+            width: 30vw;
+            display: flex;
+            gap: 40px;
+            color: #E86424;
+            img{
+                object-fit: contain;
+            }
+            p{
+                text-align: center;
+                font-size: $paragraph-size;
+            }
+        }
+    }
+    .innovation{
+        @extend .earth;
+    }
+}
+
+.gallery{
+    h2{
+        font-weight: bold;
+        padding-bottom: 60px;
+    }
+    .gallery-images{
+        @include flexCenter(row, space-between, center);
+        img{
+            width: 28vw;
+            height: 45vh;
+            object-fit: cover;
+            object-position: 5px 35%;
+            border-radius: 16px;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.location{
+    color: #E86424;
+    h2{
+        padding: 60px 0;
+    }
+    .map{
+        @include flexCenter(row, center, center);
+        padding-bottom: 50px;
+        img{
+            width: 90%;
+        }
+    }
+    p, h3{
+        font-size: $paragraph-size;
+    }
+}
+
+footer{
+    height: auto;
+    padding: 20px;
+    color: white;
+    background-color: $quaternary-color;
+    .social-media{
+        @include flexCenter(row, center, center);
+        gap: 40px;
+    }
+}
